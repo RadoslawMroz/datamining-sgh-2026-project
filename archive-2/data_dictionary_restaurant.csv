@@ -1,0 +1,20 @@
+column,type,description
+restaurant_id,string,Unique id
+cuisine,string,Cuisine type
+location_type,string,downtown / suburb_strip / mall_foodcourt / standalone / tourist_area
+is_franchise,int,1 if franchised (vs independent)
+owner_experience_years,float,Owner years of restaurant experience
+foot_traffic,float,LOCATION: foot traffic at the site (0-10)
+competition_density,float,LOCATION: nearby restaurant density (0-10) — higher raises failure
+rent_to_revenue,float,ECONOMICS: rent as a share of revenue (>0.10 is danger) — a top killer
+starting_capital_months,float,ECONOMICS: months of runway at open (undercapitalization = top killer)
+labor_cost_ratio,float,ECONOMICS: labor cost as a share of revenue
+price_tier,int,Price tier 1 (cheap) to 4 (fine dining)
+seats,int,Number of seats
+menu_size,int,Number of menu items
+has_marketing,int,1 if a defined marketing strategy
+avg_review_rating,float,"FOOD: average review rating (1-5) — matters, but less than economics"
+review_count,int,Number of reviews
+years_survived,int,Years survived before closing (0=failed year 1; 3=survived the window)
+failure_reason,string,"Why it closed (undercapitalized, rent_too_high, too_much_competition, ...) or survived"
+survived_3y,int,TARGET (binary): 1 if still open after 3 years
